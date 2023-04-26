@@ -45,7 +45,9 @@ jobs:
         ls -la kata-roman-numbers
         
     - name: Build with Maven
-      run: mvn -B -e package --file pom.xml
+      working-directory: ./
+      run: mvn -B -e package
       
     - name: Test with Maven
-      run: mvn test --file pom.xml
+      working-directory: ./
+      run: mvn test
