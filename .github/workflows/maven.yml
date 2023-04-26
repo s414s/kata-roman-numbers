@@ -44,6 +44,17 @@ jobs:
         echo "Listing kata-roman-numbers directory contents:"
         ls -la kata-roman-numbers
         
+    - name: Build and Test with Maven
+      run: |
+        #!/bin/bash
+        echo "Current directory:"
+        pwd
+        echo "Listing directory contents:"
+        ls -la
+        echo "Running Maven build and tests:"
+        mvn -B -e package
+        mvn test
+        
     - name: Build with Maven
       run: mvn -B -e package
       
