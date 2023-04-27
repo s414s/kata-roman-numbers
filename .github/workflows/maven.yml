@@ -53,6 +53,6 @@ jobs:
         echo "Listing directory contents:"
         ls -la
         echo "Running Maven build and tests:"
-        mvn -B -e package
+        mvn -B package
         mvn test
         
